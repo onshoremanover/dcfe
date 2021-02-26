@@ -1,0 +1,3 @@
+[console_scripts]
+dcfe = dcfe.__main__:main
+
