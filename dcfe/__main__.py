@@ -16,7 +16,12 @@ def main():
     argu = my_argument_function(sys.argv[1:])
 
     my_object = My_DcTracker_Class(argu)
-    
+    my_dict = my_object.set_request()
+    my_prices_float = my_object.set_prices_float(my_dict)
+    my_times = my_object.set_times(my_dict)
+    my_earnings = my_object.set_content(my_prices_float)
+    my_plot = my_object.set_plot(my_earnings, my_times)
+    #print(my_plot)
 
 if __name__ == '__main__':
     main()
