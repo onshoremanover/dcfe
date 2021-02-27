@@ -13,20 +13,21 @@ def my_argument_function(argv):
     """
 
     argu = {
-            'url' : 'https://api.nomics.com/v1/currencies/sparkline?key=6ac1de3c9ef25232936d8d43fe0cb35c&ids=DOGE&start=2021-02-01T00%3A00%3A00Z&convert=CHF',
+            'url' : 'https://api.nomics.com/v1/currencies/sparkline?key=6ac1de3c9ef25232936d8d43fe0cb35c&ids=DOGE&start=2021-02-09T00%3A00%3A00Z&convert=CHF',
             'currency' : 'CHF',
             'comission' : 0.06103,
-            'coinvalue' : 12166,
+            'coinvalue' : 1000,
+            'coinamount' : 12166
             }
     try:
-        opts, args = getopt.getopt(argv,"hu:c:k:v:",["url=","currency=","comission=","coinvalue"])
+        opts, args = getopt.getopt(argv,"hu:c:k:v:a:",["url=","currency=","comission=","coinvalue=","coinamount="])
     except getopt.GetoptError:
-        print('-u <url> -c <currency> -k <comission> -v <coinvalue>')
+        print('-u <url> -c <currency> -k <comission> -v <coinvalue> -a <coinamount>')
         sys.exit()
 
     for opt, arg in opts:
         if opt == '-h':
-            print('dcfe -u <url> -c <currency> -k <comission> -v >coinvalue>')
+            print('dcfe -u <url> -c <currency> -k <comission> -v <coinvalue> -a <coinamount>')
             sys.exit()
 
         elif opt in ("-u", "--url"):
@@ -40,6 +41,9 @@ def my_argument_function(argv):
 
         elif opt in ("-v", "--coinvalue"):
             argu['coinvalue'] = arg
+
+        elif opt in ("-a", "--coinamount"):
+            argu['coinamount'] = arg
 
     return argu
 
