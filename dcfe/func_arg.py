@@ -13,7 +13,7 @@ def my_argument_function(argv):
     """
 
     argu = {
-            'url' : 'https://api.nomics.com/v1/currencies/sparkline?key=6ac1de3c9ef25232936d8d43fe0cb35c&ids=DOGE&start=2021-02-09T00%3A00%3A00Z&convert=CHF',
+            'url' : 'https://api.nomics.com/v1/currencies/sparkline?key=6ac1de3c9ef25232936d8d43fe0cb35c&ids=DOGE&start=2021-03-09T00%3A00%3A00Z&convert=CHF',
             'currency' : 'CHF',
             'comission' : 0.06103,
             'coinvalue' : 1000,

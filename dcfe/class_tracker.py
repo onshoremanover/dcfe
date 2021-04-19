@@ -2,9 +2,16 @@ import sys, getopt, io
 import requests
 import json, csv
 import urllib.request
-import plotext as plt
+import plotext as ptt
+import uniplot as uni
 import numpy as np
 from datetime import datetime
+import matplotlib.pyplot as plt
+import matplotlib.dates as dts
+from matplotlib.dates import DateFormatter
+
+
+
 
 class My_DcTracker_Class():
     """NAME
@@ -44,6 +51,10 @@ class My_DcTracker_Class():
 
     def set_times(self, data):
         time = data[0]['timestamps']
+        for i in range(0, len(time)):
+            time[i]
+        print(time)
+        return time
     
     def set_content(self, data):
         for i in range(0, len(data)):
@@ -60,11 +71,36 @@ class My_DcTracker_Class():
         y = earnings
         x = times
         listofzeros = [0] * len(earnings)
-        plt.plot(y,line_color='red')
-        plt.plot(listofzeros,line_color='green')
-        plt.ylim(-600, 600)
+        ptt.plot(y,line_color='red')
+        ptt.plot(listofzeros,line_color='green')
+        ptt.ylim(-500, -250)
+        ptt.grid(True)
+        ptt.canvas_color("black")
+        ptt.axes_color("black")
+        ptt.ticks_color("cloud")
+        ptt.show()
+
+    def set_uni(self, earnings, times):
+        y = earnings
+        x = times
+        uni.plot(ys=y, lines=1) 
+        print("Last Entry: ")
+        print(str(y[-1]))
+        print(str(x[-1]))
+
+    def set_matplot(self, data, times):
+        # plt.plot(data)
+        # plt.show()
+
+        # dates=times
+        # values=data
+        # plt.plot(dates, values, '-o')
+        # plt.show()
+
+        ax =plt.plot_date(x=times, y=data, fmt="r-")
+        plt.title("Page impressions on example.com")
+        plt.ylabel("Page impressions")
         plt.grid(True)
-        plt.canvas_color("black")
-        plt.axes_color("black")
-        plt.ticks_color("cloud")
+        plt.xticks(rotation=90)
+        date_form = DateFormatter("%m-%d")
         plt.show()
