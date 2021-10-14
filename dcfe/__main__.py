@@ -22,6 +22,7 @@ def main():
     my_earnings = my_object.set_content(my_prices_float)
     print("times: ")
     print(my_times)
+    print()
     my_plot = my_object.set_plot(my_earnings, my_times)
     my_uniplot = my_object.set_uni(my_earnings, my_times)
     my_matplot = my_object.set_matplot(my_earnings, my_times)
