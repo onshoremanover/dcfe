@@ -13,11 +13,11 @@ def my_argument_function(argv):
     """
 
     argu = {
-            'url' : 'https://api.nomics.com/v1/currencies/sparkline?key=6ac1de3c9ef25232936d8d43fe0cb35c&ids=DOGE&start=2021-04-07T00%3A00%3A00Z&convert=CHF',
+            'url' : 'https://api.nomics.com/v1/currencies/sparkline?key=6ac1de3c9ef25232936d8d43fe0cb35c&ids=SHIB&start=2021-07-19T00%3A00%3A00Z&convert=CHF',
             'currency' : 'CHF',
             'comission' : 0.06103,
-            'coinvalue' : 1000,
-            'coinamount' : 12166
+            'coinvalue' : 2000,
+            'coinamount' : 331823144
             }
     try:
         opts, args = getopt.getopt(argv,"hu:c:k:v:a:",["url=","currency=","comission=","coinvalue=","coinamount="])
