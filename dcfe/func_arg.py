@@ -13,7 +13,7 @@ def my_argument_function(argv):
     """
 
     argu = {
-            'url' : 'https://api.nomics.com/v1/currencies/sparkline?key=6ac1de3c9ef25232936d8d43fe0cb35c&ids=SHIB&start=2021-10-14T00%3A00%3A00Z&convert=CHF',
+            'url' : 'https://api.nomics.com/v1/currencies/sparkline?key=6ac1de3c9ef25232936d8d43fe0cb35c&ids=SHIB&start=2021-10-20T00%3A00%3A00Z&convert=CHF',
             'currency' : 'CHF',
             'comission' : 0.06103,
             'coinvalue' : 1925,
