@@ -71,8 +71,8 @@ class My_DcTracker_Class():
         y = earnings
         x = times
         listofzeros = [0] * len(earnings)
-        ptt.plot(y,line_color='red')
-        ptt.plot(listofzeros,line_color='green')
+        ptt.plot(y)
+        ptt.plot(listofzeros)
         ptt.grid(True)
         ptt.canvas_color("black")
         ptt.axes_color("black")
@@ -84,7 +84,7 @@ class My_DcTracker_Class():
     def set_uni(self, earnings, times):
         y = earnings
         x = times
-        uni.plot(ys=y,lines=1) 
+        uni.plot(ys=y, lines=True) 
         print("Last Entry: ")
         print(str(y[-1]))
         print(str(x[-1]))
